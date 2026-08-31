@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+:root {
+  /* Base surfaces */
+  --rx-black: #080808;
+  --rx-charcoal: #111111;
+  --rx-charcoal-2: #181818;
+  --rx-border: #242424;
+  --rx-border-soft: #1c1c1c;
+
+  /* Brand blue, sampled directly from the RAYNEX mark */
+  --rx-blue: #0063af;
+  --rx-blue-light: #2e8ce0;
+  --rx-blue-dark: #003d6e;
+
+  /* Type */
+  --rx-white: #ffffff;
+  --rx-muted: #a5a5a5;
+  --rx-muted-2: #6f6f6f;
+}
+
+@theme inline {
+  --color-rx-black: var(--rx-black);
+  --color-rx-charcoal: var(--rx-charcoal);
+  --color-rx-charcoal-2: var(--rx-charcoal-2);
+  --color-rx-border: var(--rx-border);
+  --color-rx-border-soft: var(--rx-border-soft);
+  --color-rx-blue: var(--rx-blue);
+  --color-rx-blue-light: var(--rx-blue-light);
+  --color-rx-blue-dark: var(--rx-blue-dark);
+  --color-rx-white: var(--rx-white);
+  --color-rx-muted: var(--rx-muted);
+  --color-rx-muted-2: var(--rx-muted-2);
+
+  --font-display: var(--font-manrope);
+  --font-body: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--rx-black);
+  color: var(--rx-white);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--rx-blue);
+  color: var(--rx-white);
+}
+
+/* Focus states — always visible, brand-colored */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--rx-blue-light);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Scroll reveal primitive */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Hairline divider */
+.rx-hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rx-border) 20%, var(--rx-border) 80%, transparent);
+}
+
+/* Signature beam sweep — used on hover states, echoing the fixture's rays */
+@keyframes beam-sweep {
+  0% {
+    transform: translateX(-120%) skewX(-12deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(220%) skewX(-12deg);
+    opacity: 0;
+  }
+}
+
+.rx-beam-hover {
+  position: relative;
+  overflow: hidden;
+}
+.rx-beam-hover::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 30%;
+  height: 140%;
+  background: linear-gradient(90deg, transparent, rgba(46, 140, 224, 0.16), transparent);
+  pointer-events: none;
+  opacity: 0;
+}
+.rx-beam-hover:hover::after {
+  animation: beam-sweep 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fade-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.rx-hero-image {
+  animation: fade-scale-in 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.rx-tracking-wide {
+  letter-spacing: 0.14em;
+}
