@@ -19,7 +19,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-rx-muted">
-              Illuminate Your World premium lighting and electrical
+              Illuminate Your World. Premium lighting and electrical
               products for everyday spaces.
             </p>
           </div>
@@ -29,7 +29,9 @@ export default function Footer() {
             <ul className="flex flex-col gap-2.5 text-sm text-rx-muted">
               <li><Link href="/" className="transition-colors hover:text-rx-white">Home</Link></li>
               <li><Link href="/products" className="transition-colors hover:text-rx-white">Products</Link></li>
-              <li><Link href="/#brand" className="transition-colors hover:text-rx-white">About / Brand</Link></li>
+              <li><Link href="/applications" className="transition-colors hover:text-rx-white">Applications</Link></li>
+              <li><Link href="/projects" className="transition-colors hover:text-rx-white">Projects</Link></li>
+              {/* <li><Link href="/gallery" className="transition-colors hover:text-rx-white">Gallery</Link></li> */}
               <li><Link href="/contact" className="transition-colors hover:text-rx-white">Contact</Link></li>
             </ul>
           </div>

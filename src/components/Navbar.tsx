@@ -7,8 +7,10 @@ import { useEffect, useState } from "react";
 const links = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
-  { href: "/#brand", label: "About" },
-  // { href: "/contact", label: "Contact" },
+  { href: "/applications", label: "Applications" },
+  { href: "/projects", label: "Projects" },
+  // { href: "/gallery", label: "Gallery" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -30,22 +32,16 @@ export default function Navbar() {
     >
       <div className="rx-hairline absolute inset-x-0 bottom-0" />
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-      <Link
-  href="/"
-  className="flex items-center"
-  aria-label="RAYNEX home"
->
-  <Image
-    src="/brand/raynex-logo.png"
-    alt="RAYNEX"
-    width={200}
-    height={55}
-    priority
-    className="h-auto w-[250px] object-contain sm:w-[230px]"
-  />
-</Link>
+        <Link href="/" className="flex items-center gap-3" aria-label="RAYNEX home">
+          <span className="relative h-9 w-9 overflow-hidden rounded-sm">
+            <Image src="/brand/raynex-logo.jpg" alt="" fill className="object-cover" />
+          </span>
+          <span className="font-display text-xl font-extrabold tracking-tight text-rx-white">
+            RAYNEX
+          </span>
+        </Link>
 
-        <ul className="hidden items-center gap-9 md:flex">
+        <ul className="hidden items-center gap-6 lg:flex lg:gap-7 xl:gap-9">
           {links.map((link) => (
             <li key={link.label}>
               <Link
@@ -60,7 +56,7 @@ export default function Navbar() {
 
         <Link
           href="/contact"
-          className="hidden rx-beam-hover items-center gap-2 border border-rx-blue bg-rx-blue px-5 py-2.5 text-xs font-semibold uppercase rx-tracking-wide text-rx-white transition-colors hover:bg-rx-blue-dark md:inline-flex"
+          className="hidden rx-beam-hover items-center gap-2 border border-rx-blue bg-rx-blue px-5 py-2.5 text-xs font-semibold uppercase rx-tracking-wide text-rx-white transition-colors hover:bg-rx-blue-dark lg:inline-flex"
         >
           Contact Us
         </Link>
@@ -70,7 +66,7 @@ export default function Navbar() {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label="Toggle menu"
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 border border-rx-border md:hidden"
+          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 border border-rx-border lg:hidden"
         >
           <span
             className={`h-px w-5 bg-rx-white transition-transform ${open ? "translate-y-[3px] rotate-45" : ""}`}
@@ -83,8 +79,8 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`overflow-hidden border-t border-rx-border bg-rx-black transition-[max-height] duration-300 md:hidden ${
-          open ? "max-h-96" : "max-h-0 border-t-0"
+        className={`overflow-hidden border-t border-rx-border bg-rx-black transition-[max-height] duration-300 lg:hidden ${
+          open ? "max-h-[26rem]" : "max-h-0 border-t-0"
         }`}
       >
         <ul className="flex flex-col gap-1 px-6 py-4">

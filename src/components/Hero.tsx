@@ -1,27 +1,19 @@
 import Link from "next/link";
 import { RayField } from "./Rays";
-import ImagePlaceholder from "./ImagePlaceholder";
 
 export default function Hero() {
   return (
     <section className="relative flex min-h-[92vh] items-center overflow-hidden border-b border-rx-border pt-24">
-      <div className="absolute inset-1 rx-hero-image">
-        {/* <ImagePlaceholder
-          src="/brand/hero.png"
-          alt="RAYNEX architectural lighting installed in a premium interior"
-          label="Hero Image Placeholder"
-          aspect="wide"
-          className="h-full w-full border-0"
-        /> */}
+      <div className="absolute inset-0 rx-hero-image">
         <video
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="h-full w-full object-cover"
->
-  <source src="/brand/hero.mp4" type="video/mp4" />
-</video>
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="h-full w-full object-cover"
+        >
+          <source src="/brand/hero.mp4" type="video/mp4" />
+        </video>
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-rx-black via-rx-black/70 to-rx-black/40" />
       <div className="absolute inset-0 bg-gradient-to-r from-rx-black via-rx-black/50 to-transparent" />

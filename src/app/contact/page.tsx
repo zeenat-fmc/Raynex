@@ -5,8 +5,8 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { RayGlyph } from "@/components/Rays";
 
 export const metadata: Metadata = {
-  title: "Contact — RAYNEX",
-  description: "Get in touch with RAYNEX — address, phone, email, and business hours.",
+  title: "Contact - RAYNEX",
+  description: "Get in touch with RAYNEX - address, phone, email, and business hours.",
 };
 
 export default function ContactPage() {
@@ -21,7 +21,7 @@ export default function ContactPage() {
         </h1>
         <p className="mt-5 max-w-lg text-base leading-relaxed text-rx-muted">
           Have a project in mind, or a question about the RAYNEX range? Reach
-          out — details below, or send a message directly.
+          out details below, or send a message directly.
         </p>
 
         <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-16">

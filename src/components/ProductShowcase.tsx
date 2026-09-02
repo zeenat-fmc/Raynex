@@ -39,7 +39,7 @@ export default function ProductShowcase({ products }: ProductShowcaseProps) {
 
       {active && (
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-rx-black/85 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-rx-black/85 p-6 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           aria-label={active.name}

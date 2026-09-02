@@ -16,7 +16,7 @@ export default function ContactForm() {
       <div className="border border-rx-border bg-rx-charcoal p-8">
         <h3 className="font-display text-xl font-bold text-rx-white">Message sent.</h3>
         <p className="mt-2 text-sm leading-relaxed text-rx-muted">
-          Thanks for reaching out the RAYNEX team will get back to you shortly.
+          Thanks for reaching out. The RAYNEX team will get back to you shortly.
         </p>
       </div>
     );

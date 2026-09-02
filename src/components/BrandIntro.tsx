@@ -17,7 +17,7 @@ export default function BrandIntro() {
           <SectionHeading
             eyebrow="The Brand"
             title="Built around one idea: light should just work."
-            description="RAYNEX brings together lighting and electrical products designed for consistency — from the first install to years of daily use. Every fixture in the range is built to a shared standard of quality, so a project spec'd today still performs the way it should tomorrow."
+            description="RAYNEX brings together lighting and electrical products designed for consistency from the first install to years of daily use. Every fixture in the range is built to a shared standard of quality, so a project spec'd today still performs the way it should tomorrow."
           />
           <p className="max-w-xl text-[15px] leading-relaxed text-rx-muted">
             We work with a focused catalogue rather than an endless one
