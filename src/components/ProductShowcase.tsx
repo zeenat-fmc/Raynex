@@ -71,8 +71,8 @@ export default function ProductShowcase({ products }: ProductShowcaseProps) {
                   {active.category}
                 </span>
               </span>
-              <h3 className="font-display text-2xl font-bold text-rx-white">{active.name}</h3>
-              
+              <h3 className="font-display text-2xl font-bold text-rx-white">Name:{active.name}</h3>
+              <h3 className="font-display text-2xl font-bold text-rx-white">ArticleNo:{active.articleNo}</h3>
               <p className="text-sm leading-relaxed text-rx-muted">{active.description}</p>
               <a
                 href="/contact"
