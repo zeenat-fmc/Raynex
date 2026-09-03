@@ -8,10 +8,6 @@ export type Product = {
   image?: string;
 };
 
-/**
- * RAYNEX LED Downlight Collection
- * Total Products: 9
- */
 export const products: Product[] = [
   {
     id: "product-01",

@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   title: "RAYNEX - Illuminate Your World",
   description:
     "RAYNEX designs premium lighting and electrical products for residential, commercial, retail, hospitality, and architectural spaces.",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
