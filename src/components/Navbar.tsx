@@ -46,7 +46,7 @@ export default function Navbar() {
             <li key={link.label}>
               <Link
                 href={link.href}
-                className="rx-tracking-wide text-xs font-semibold uppercase text-rx-muted transition-colors hover:text-rx-white"
+                className="rx-tracking-wide text-xs text-white font-semibold uppercase text-rx-muted transition-colors hover:text-rx-white"
               >
                 {link.label}
               </Link>
