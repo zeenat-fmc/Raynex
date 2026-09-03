@@ -10,7 +10,7 @@ const links = [
   { href: "/applications", label: "Applications" },
   { href: "/projects", label: "Projects" },
   // { href: "/gallery", label: "Gallery" },
-  { href: "/contact", label: "Contact" },
+  // { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
