@@ -1,183 +1,159 @@
-// export type Product = {
-//   id: string;
-//   name: string;
-//   category: string;
-//   description: string;
-//   /** Optional image path. Leave empty to show the placeholder graphic. */
-//   image?: string;
-// };
 export type Product = {
   id: string;
+  srNo: number;
   name: string;
+  articleNo: string;
   category: string;
   description: string;
-  articleNo?: string;
   image?: string;
 };
+
 /**
- * RAYNEX product catalogue — exactly 9 products.
- *
- * This is the ONLY file you need to edit to update product content.
- * Replace `name`, `category`, `description`, and add an `image` path
- * (e.g. "/products/recessed-downlight.jpg") once real photography
- * and copy are available.
+ * RAYNEX LED Downlight Collection
+ * Total Products: 9
  */
-// export const products: Product[] = [
-//   {
-//     id: "product-01",
-//     name: "[Product Name]",
-//     category: "[Category]",
-//     description: "[Short product description goes here — one or two sentences on what this fixture is and where it's used.]",
-//   },
-//   {
-//     id: "product-02",
-//     name: "[Product Name]",
-//     category: "[Category]",
-//     description: "[Short product description goes here — one or two sentences on what this fixture is and where it's used.]",
-//   },
-//   {
-//     id: "product-03",
-//     name: "[Product Name]",
-//     category: "[Category]",
-//     description: "[Short product description goes here — one or two sentences on what this fixture is and where it's used.]",
-//   },
-//   {
-//     id: "product-04",
-//     name: "[Product Name]",
-//     category: "[Category]",
-//     description: "[Short product description goes here — one or two sentences on what this fixture is and where it's used.]",
-//   },
-//   {
-//     id: "product-05",
-//     name: "[Product Name]",
-//     category: "[Category]",
-//     description: "[Short product description goes here — one or two sentences on what this fixture is and where it's used.]",
-//   },
-//   {
-//     id: "product-06",
-//     name: "[Product Name]",
-//     category: "[Category]",
-//     description: "[Short product description goes here — one or two sentences on what this fixture is and where it's used.]",
-//   },
-//   {
-//     id: "product-07",
-//     name: "[Product Name]",
-//     category: "[Category]",
-//     description: "[Short product description goes here — one or two sentences on what this fixture is and where it's used.]",
-//   },
-//   {
-//     id: "product-08",
-//     name: "[Product Name]",
-//     category: "[Category]",
-//     description: "[Short product description goes here — one or two sentences on what this fixture is and where it's used.]",
-//   },
-//   {
-//     id: "product-09",
-//     name: "[Product Name]",
-//     category: "[Category]",
-//     description: "[Short product description goes here — one or two sentences on what this fixture is and where it's used.]",
-//   },
-// ];
 export const products: Product[] = [
   {
     id: "product-01",
-    name: "Maserati 12W Matte Black Cup",
+    srNo: 36,
+    name: "12W White Smart Multi-Colour Option",
+    articleNo: "HMBRGXQD",
     category: "Downlights",
     description:
-      "12W recessed downlight featuring a matte black cup design, suitable for modern residential and commercial interiors.",
+      "12W white recessed LED downlight with multi-colour functionality, designed for versatile residential and commercial lighting applications.",
+    image: "/products/1.png",
   },
+
   {
     id: "product-02",
-    name: "12W White Cup",
+    srNo: 33,
+    name: "MAX 12W White Cup",
+    articleNo: "NSMAX-WH",
     category: "Downlights",
     description:
-      "12W recessed LED downlight with a clean white cup finish, designed for practical and consistent everyday illumination.",
+      "Compact 12W recessed LED downlight with a clean white cup design, suitable for homes, offices and retail spaces.",
+    image: "/products/2.png",
   },
+
   {
     id: "product-03",
-    name: "12W Bright White Cup - New Model",
+    srNo: 35,
+    name: "12W BrightWhite Cup New Model",
+    articleNo: "HMBXQD",
     category: "Downlights",
     description:
-      "12W recessed downlight with a bright white cup and updated housing design for clean architectural installations.",
+      "12W recessed LED downlight featuring an upgraded BrightWhite reflector cup for improved brightness and uniform light distribution.",
+    image: "/products/3.png",
   },
+
   {
     id: "product-04",
-    name: "12W White",
+    srNo: 32,
+    name: "Maserati - 12W Matte Black Cup",
+    articleNo: "MSLDXQD-BK",
     category: "Downlights",
     description:
-      "12W white recessed LED downlight designed for clean, efficient illumination across residential and commercial spaces.",
+      "12W recessed LED downlight with a distinctive matte black cup, designed for modern interiors requiring focused illumination and reduced glare.",
+    image: "/products/4.png",
   },
+
   {
     id: "product-05",
-    name: "12W White Cup Color",
+    srNo: 37,
+    name: "Igor 12W White Cup",
+    articleNo: "BSGY",
     category: "Downlights",
     description:
-      "12W recessed downlight with a white cup finish, offering a compact and versatile lighting solution for interior applications.",
+      "12W white recessed downlight with a precision-designed cup for controlled illumination, suitable for residential, retail and architectural applications.",
+    image: "/products/05.png",
   },
+
   {
     id: "product-06",
-    name: "10W White with Transparent Cup & Orange Spring",
+    srNo: 38,
+    name: "PG 10W White + Transparent Cup (Orange Spring)",
+    articleNo: "PG",
     category: "Downlights",
     description:
-      "10W recessed downlight with a white finish, transparent cup and orange spring mechanism for secure installation.",
+      "10W recessed LED downlight with a white housing, transparent cup and signature orange spring mechanism for secure installation.",
+    image: "/products/06.png",
   },
+
   {
     id: "product-07",
-    name: "7W White Cup",
+    srNo: 39,
+    name: "AY 7W White Cup",
+    articleNo: "AY",
     category: "Downlights",
     description:
-      "Compact 7W recessed LED downlight with a white cup design, ideal for focused and energy-efficient indoor lighting.",
+      "Compact 7W white recessed LED downlight designed for smaller spaces, corridors, closets and low-ceiling applications.",
+    image: "/products/07.png",
   },
+
   {
     id: "product-08",
-    name: "24W White Cup - 5-inch Opening",
+    srNo: 40,
+    name: "MY 24W White Cup, 5-Inch Opening (135mm)",
+    articleNo: "MY-WH",
     category: "Downlights",
     description:
-      "24W recessed downlight with a white cup, designed for a 5-inch opening and approximately 135mm overall size.",
+      "High-output 24W recessed LED downlight with a white cup and 5-inch opening, designed for larger residential and commercial spaces.",
+    image: "/products/08.png",
   },
+
   {
     id: "product-09",
-    name: "24W White Cup - 4-inch Opening",
+    srNo: 42,
+    name: "RF 24W White Cup, 4-Inch Opening (105mm)",
+    articleNo: "RF-WH",
     category: "Downlights",
     description:
-      "24W recessed downlight with a white cup, designed for a 4-inch opening and approximately 105mm overall size.",
+      "Compact 24W recessed LED downlight with a white cup and 4-inch opening, providing strong illumination from a smaller ceiling cutout.",
+    image: "/products/09.png",
   },
 ];
 export type Application = {
   id: string;
   name: string;
   description?: string;
+  image?: string;
 };
 
 export const applications: Application[] = [
   {
     id: "residential",
     name: "Residential",
+    image: "/brand/res.png",
     description: "Warm, livable light for homes - from everyday rooms to considered architectural moments.",
   },
   {
     id: "commercial",
     name: "Commercial",
+     image: "/brand/com.png",
     description: "Consistent, dependable lighting built for spaces that run long hours, every day of the week.",
   },
   {
     id: "retail",
     name: "Retail",
+    image: "/brand/retail.png",
     description: "Light that shapes how products and spaces are seen, without overpowering them.",
   },
   {
     id: "hospitality",
     name: "Hospitality",
+    image: "/brand/hospital.png",
     description: "Mood and comfort for hotels, restaurants, and spaces guests are meant to linger in.",
   },
   {
     id: "offices",
     name: "Offices",
+    image: "/brand/ofc.png",
     description: "Even, glare-controlled light suited to focused work and long occupancy.",
   },
   {
     id: "architectural",
     name: "Architectural Projects",
+    image: "/brand/arc.png",
     description: "Fixtures selected to support a design intent, not compete with it.",
   },
 ];

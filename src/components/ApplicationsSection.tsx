@@ -31,6 +31,7 @@ export default function ApplicationsSection() {
             <Reveal key={app.id} delay={i * 70}>
               <div className="group rx-beam-hover relative overflow-hidden border border-rx-border">
                 <ImagePlaceholder
+                  src={app.image}
                   alt={`RAYNEX lighting in ${app.name.toLowerCase()} spaces`}
                   label={app.name}
                   aspect="square"

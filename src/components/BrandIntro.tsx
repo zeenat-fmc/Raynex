@@ -7,10 +7,11 @@ export default function BrandIntro() {
     <section id="brand" className="relative bg-rx-black py-24 lg:py-32">
       <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:items-center lg:gap-20 lg:px-10">
         <Reveal>
-          <ImagePlaceholder
+          {/* Replace the src with your image path, e.g. "/images/brand.jpg" or an imported asset */}
+          <img
+            src="/brand/image.png"
             alt="RAYNEX lighting installed inside a modern living space"
-            label="Brand Image Placeholder"
-            aspect="portrait"
+            className="w-full h-auto rounded-md object-cover"
           />
         </Reveal>
         <Reveal delay={120} className="flex flex-col gap-6">

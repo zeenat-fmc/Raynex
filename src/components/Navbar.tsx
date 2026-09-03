@@ -32,14 +32,20 @@ export default function Navbar() {
     >
       <div className="rx-hairline absolute inset-x-0 bottom-0" />
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <Link href="/" className="flex items-center gap-3" aria-label="RAYNEX home">
-          <span className="relative h-9 w-9 overflow-hidden rounded-sm">
-            <Image src="/brand/raynex-logo.jpg" alt="" fill className="object-cover" />
-          </span>
-          <span className="font-display text-xl font-extrabold tracking-tight text-rx-white">
-            RAYNEX
-          </span>
-        </Link>
+        <Link
+  href="/"
+  className="flex items-center"
+  aria-label="RAYNEX home"
+>
+  <Image
+    src="/brand/raynex-logo.png"
+    alt="RAYNEX"
+    width={180}
+    height={55}
+    priority
+    className="h-auto w-[150px] object-contain sm:w-[190px]"
+  />
+</Link>
 
         <ul className="hidden items-center gap-6 lg:flex lg:gap-7 xl:gap-9">
           {links.map((link) => (
