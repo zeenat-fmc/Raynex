@@ -41,6 +41,7 @@ export default function ApplicationsPage() {
                 }`}
               >
                 <ImagePlaceholder
+                  src={app.image}
                   alt={`RAYNEX lighting in ${app.name.toLowerCase()} spaces`}
                   label={app.name}
                   aspect="landscape"

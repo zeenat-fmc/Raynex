@@ -48,14 +48,15 @@ export default function ContactPage() {
               Message Us on WhatsApp
             </a>
 
-            <div className="border border-rx-border">
+            {/* <div className="border border-rx-border">
               <ImagePlaceholder
+                src="/brand/map.png"
                 alt="Map showing the RAYNEX location"
                 label="Map Placeholder"
                 aspect="landscape"
                 className="border-0"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT: contact form */}

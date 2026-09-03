@@ -113,6 +113,7 @@ export const products: Product[] = [
   },
 ];
 export type Application = {
+  img: string | undefined;
   id: string;
   name: string;
   description?: string;
@@ -125,36 +126,42 @@ export const applications: Application[] = [
     name: "Residential",
     image: "/brand/res.png",
     description: "Warm, livable light for homes - from everyday rooms to considered architectural moments.",
+    img: undefined
   },
   {
     id: "commercial",
     name: "Commercial",
-     image: "/brand/com.png",
+    image: "/brand/com.png",
     description: "Consistent, dependable lighting built for spaces that run long hours, every day of the week.",
+    img: undefined
   },
   {
     id: "retail",
     name: "Retail",
     image: "/brand/retail.png",
     description: "Light that shapes how products and spaces are seen, without overpowering them.",
+    img: undefined
   },
   {
     id: "hospitality",
     name: "Hospitality",
-    image: "/brand/hospital.png",
+    image: "/brand/bou.png",
     description: "Mood and comfort for hotels, restaurants, and spaces guests are meant to linger in.",
+    img: undefined
   },
   {
     id: "offices",
     name: "Offices",
     image: "/brand/ofc.png",
     description: "Even, glare-controlled light suited to focused work and long occupancy.",
+    img: undefined
   },
   {
     id: "architectural",
     name: "Architectural Projects",
     image: "/brand/arc.png",
     description: "Fixtures selected to support a design intent, not compete with it.",
+    img: undefined
   },
 ];
 
@@ -233,7 +240,7 @@ export const projects: Project[] = [
     category: "Hospitality",
     description:
       "A refined hospitality space where lighting plays an important role in creating a welcoming atmosphere. RAYNEX fixtures provide focused illumination throughout guest areas, corridors, and common spaces.",
-    image: "/projects/hospitality.png",
+    image: "/brand/bou.png",
   },
 
   {
@@ -243,7 +250,7 @@ export const projects: Project[] = [
     category: "Retail",
     description:
       "A modern retail environment designed to keep products visually prominent. Carefully positioned RAYNEX downlights deliver focused, consistent illumination while maintaining a clean ceiling aesthetic.",
-    image: "/projects/retail.png",
+    image: "/brand/retail.png",
   },
 
   {
@@ -253,7 +260,7 @@ export const projects: Project[] = [
     category: "Offices",
     description:
       "A contemporary workplace designed around productivity, comfort, and visual clarity. RAYNEX lighting solutions provide even illumination across workstations, meeting rooms, and shared spaces.",
-    image: "/projects/office.png",
+    image: "/brand/ofc.png",
   },
 
   {
@@ -263,7 +270,7 @@ export const projects: Project[] = [
     category: "Commercial",
     description:
       "A large-scale commercial environment requiring dependable lighting across multiple functional areas. RAYNEX fixtures were selected for their clean appearance, efficiency, and consistent performance.",
-    image: "/projects/com.png",
+    image: "/brand/com.png",
   },
 
   {
@@ -273,7 +280,7 @@ export const projects: Project[] = [
     category: "Architectural",
     description:
       "An architectural lighting project focused on enhancing the character of the space without overwhelming the design. RAYNEX downlights were integrated into the architecture to highlight key details and surfaces.",
-    image: "/projects/architectural.png",
+    image: "/brand/arc.png",
   },
 ];
 export type GalleryImage = {
