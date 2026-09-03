@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "RAYNEX — Illuminate Your World",
+  title: "RAYNEX - Illuminate Your World",
   description:
     "RAYNEX designs premium lighting and electrical products for residential, commercial, retail, hospitality, and architectural spaces.",
 };
