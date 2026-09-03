@@ -171,51 +171,111 @@ export type Project = {
  * Sample project / case-study entries. Replace with real project names,
  * locations, and photography once available — same pattern as `products`.
  */
+// export const projects: Project[] = [
+//   {
+//     id: "project-01",
+//     name: "[Project Name]",
+//     location: "[City, Country]",
+//     category: "Residential",
+//     description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+//   },
+//   {
+//     id: "project-02",
+//     name: "[Project Name]",
+//     location: "[City, Country]",
+//     category: "Hospitality",
+//     description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+//   },
+//   {
+//     id: "project-03",
+//     name: "[Project Name]",
+//     location: "[City, Country]",
+//     category: "Retail",
+//     description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+//   },
+//   {
+//     id: "project-04",
+//     name: "[Project Name]",
+//     location: "[City, Country]",
+//     category: "Offices",
+//     description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+//   },
+//   {
+//     id: "project-05",
+//     name: "[Project Name]",
+//     location: "[City, Country]",
+//     category: "Commercial",
+//     description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+//   },
+//   {
+//     id: "project-06",
+//     name: "[Project Name]",
+//     location: "[City, Country]",
+//     category: "Architectural",
+//     description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+//   },
+// ];
 export const projects: Project[] = [
   {
     id: "project-01",
-    name: "[Project Name]",
-    location: "[City, Country]",
+    name: "Modern Residence",
+    location: "Islamabad, Pakistan",
     category: "Residential",
-    description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+    description:
+      "A contemporary residential project designed with clean architectural lines and warm, balanced lighting. RAYNEX downlights were used to create comfortable illumination across living areas, bedrooms, and circulation spaces.",
+     image: "/brand/res.png",
   },
+
   {
     id: "project-02",
-    name: "[Project Name]",
-    location: "[City, Country]",
+    name: "Luxury Boutique Hotel",
+    location: "Lahore, Pakistan",
     category: "Hospitality",
-    description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+    description:
+      "A refined hospitality space where lighting plays an important role in creating a welcoming atmosphere. RAYNEX fixtures provide focused illumination throughout guest areas, corridors, and common spaces.",
+    image: "/projects/hospitality.png",
   },
+
   {
     id: "project-03",
-    name: "[Project Name]",
-    location: "[City, Country]",
+    name: "Premium Retail Store",
+    location: "Karachi, Pakistan",
     category: "Retail",
-    description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+    description:
+      "A modern retail environment designed to keep products visually prominent. Carefully positioned RAYNEX downlights deliver focused, consistent illumination while maintaining a clean ceiling aesthetic.",
+    image: "/projects/retail.png",
   },
+
   {
     id: "project-04",
-    name: "[Project Name]",
-    location: "[City, Country]",
+    name: "Corporate Office",
+    location: "Islamabad, Pakistan",
     category: "Offices",
-    description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+    description:
+      "A contemporary workplace designed around productivity, comfort, and visual clarity. RAYNEX lighting solutions provide even illumination across workstations, meeting rooms, and shared spaces.",
+    image: "/projects/office.png",
   },
+
   {
     id: "project-05",
-    name: "[Project Name]",
-    location: "[City, Country]",
+    name: "Commercial Development",
+    location: "Rawalpindi, Pakistan",
     category: "Commercial",
-    description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+    description:
+      "A large-scale commercial environment requiring dependable lighting across multiple functional areas. RAYNEX fixtures were selected for their clean appearance, efficiency, and consistent performance.",
+    image: "/projects/com.png",
   },
+
   {
     id: "project-06",
-    name: "[Project Name]",
-    location: "[City, Country]",
+    name: "Architectural Residence",
+    location: "Lahore, Pakistan",
     category: "Architectural",
-    description: "[Short project description - the brief, the approach, and the RAYNEX fixtures used.]",
+    description:
+      "An architectural lighting project focused on enhancing the character of the space without overwhelming the design. RAYNEX downlights were integrated into the architecture to highlight key details and surfaces.",
+    image: "/projects/architectural.png",
   },
 ];
-
 export type GalleryImage = {
   id: string;
   caption: string;
@@ -279,8 +339,8 @@ export type ContactDetail = {
 };
 
 export const contactDetails: ContactDetail[] = [
-  { label: "Address", value: "Opposit Gate No.4 - DHA Phase 2, GT Road, Islamabad, Pakistan" },
-  { label: "Phone", value: "(+92) 342-7043613" },
+  { label: "Address", value: "Opposite Gate No.4 - DHA Phase 2, GT Road, Islamabad, Pakistan" },
+  { label: "Phone", value: "+92342-7043613" },
   { label: "Email", value: "info@raynex.com" },
   // { label: "Business Hours", value: "[Business Hours]" },
 ];

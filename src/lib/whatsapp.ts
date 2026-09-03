@@ -10,7 +10,7 @@
  * elsewhere.
  */
 export const whatsapp = {
-  number: "10000000000", // [Placeholder — replace with real WhatsApp number]
+  number: "+923427043613", // [Placeholder — replace with real WhatsApp number]
   defaultMessage: "Hi RAYNEX, I'd like to know more about your products.",
 };
 
