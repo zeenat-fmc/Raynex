@@ -1,4 +1,5 @@
 export type Product = {
+  specs: boolean;
   id: string;
   srNo: number;
   name: string;
@@ -15,9 +16,9 @@ export const products: Product[] = [
     name: "12W White Smart Multi-Colour Option",
     articleNo: "HMBRGXQD",
     category: "Downlights",
-    description:
-      "12W white recessed LED downlight with multi-colour functionality, designed for versatile residential and commercial lighting applications.",
+    description: "12W white recessed LED downlight with multi-colour functionality, designed for versatile residential and commercial lighting applications.",
     image: "/products/1.png",
+    specs: false
   },
 
   {
@@ -26,9 +27,9 @@ export const products: Product[] = [
     name: "MAX 12W White Cup",
     articleNo: "NSMAX-WH",
     category: "Downlights",
-    description:
-      "Compact 12W recessed LED downlight with a clean white cup design, suitable for homes, offices and retail spaces.",
+    description: "Compact 12W recessed LED downlight with a clean white cup design, suitable for homes, offices and retail spaces.",
     image: "/products/2.png",
+    specs: false
   },
 
   {
@@ -37,9 +38,9 @@ export const products: Product[] = [
     name: "12W BrightWhite Cup New Model",
     articleNo: "HMBXQD",
     category: "Downlights",
-    description:
-      "12W recessed LED downlight featuring an upgraded BrightWhite reflector cup for improved brightness and uniform light distribution.",
+    description: "12W recessed LED downlight featuring an upgraded BrightWhite reflector cup for improved brightness and uniform light distribution.",
     image: "/products/3.png",
+    specs: false
   },
 
   {
@@ -48,9 +49,9 @@ export const products: Product[] = [
     name: "Maserati - 12W Matte Black Cup",
     articleNo: "MSLDXQD-BK",
     category: "Downlights",
-    description:
-      "12W recessed LED downlight with a distinctive matte black cup, designed for modern interiors requiring focused illumination and reduced glare.",
+    description: "12W recessed LED downlight with a distinctive matte black cup, designed for modern interiors requiring focused illumination and reduced glare.",
     image: "/products/4.png",
+    specs: false
   },
 
   {
@@ -59,9 +60,9 @@ export const products: Product[] = [
     name: "Igor 12W White Cup",
     articleNo: "BSGY",
     category: "Downlights",
-    description:
-      "12W white recessed downlight with a precision-designed cup for controlled illumination, suitable for residential, retail and architectural applications.",
+    description: "12W white recessed downlight with a precision-designed cup for controlled illumination, suitable for residential, retail and architectural applications.",
     image: "/products/05.png",
+    specs: false
   },
 
   {
@@ -70,9 +71,9 @@ export const products: Product[] = [
     name: "PG 10W White + Transparent Cup (Orange Spring)",
     articleNo: "PG",
     category: "Downlights",
-    description:
-      "10W recessed LED downlight with a white housing, transparent cup and signature orange spring mechanism for secure installation.",
+    description: "10W recessed LED downlight with a white housing, transparent cup and signature orange spring mechanism for secure installation.",
     image: "/products/06.png",
+    specs: false
   },
 
   {
@@ -81,9 +82,9 @@ export const products: Product[] = [
     name: "AY 7W White Cup",
     articleNo: "AY",
     category: "Downlights",
-    description:
-      "Compact 7W white recessed LED downlight designed for smaller spaces, corridors, closets and low-ceiling applications.",
+    description: "Compact 7W white recessed LED downlight designed for smaller spaces, corridors, closets and low-ceiling applications.",
     image: "/products/07.png",
+    specs: false
   },
 
   {
@@ -92,9 +93,9 @@ export const products: Product[] = [
     name: "MY 24W White Cup, 5-Inch Opening (135mm)",
     articleNo: "MY-WH",
     category: "Downlights",
-    description:
-      "High-output 24W recessed LED downlight with a white cup and 5-inch opening, designed for larger residential and commercial spaces.",
+    description: "High-output 24W recessed LED downlight with a white cup and 5-inch opening, designed for larger residential and commercial spaces.",
     image: "/products/08.png",
+    specs: false
   },
 
   {
@@ -103,9 +104,9 @@ export const products: Product[] = [
     name: "RF 24W White Cup, 4-Inch Opening (105mm)",
     articleNo: "RF-WH",
     category: "Downlights",
-    description:
-      "Compact 24W recessed LED downlight with a white cup and 4-inch opening, providing strong illumination from a smaller ceiling cutout.",
+    description: "Compact 24W recessed LED downlight with a white cup and 4-inch opening, providing strong illumination from a smaller ceiling cutout.",
     image: "/products/09.png",
+    specs: false
   },
 ];
 export type Application = {

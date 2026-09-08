@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { products } from "@/lib/products";
-import ProductShowcase from "@/components/ProductShowcase";
+import ProductGrid from "@/components/ProductGrid";
 import { RayField } from "@/components/Rays";
 
 export const metadata: Metadata = {
-  title: "Products - RAYNEX",
+  title: "Products — RAYNEX",
   description: "Explore the full RAYNEX lighting and electrical product catalogue.",
 };
 
@@ -22,14 +22,14 @@ export default function ProductsPage() {
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-rx-muted">
             Nine fixtures. Nine clear purposes. Browse the full RAYNEX range
-            below, or select any product for a closer look.
+            below, or open any product for full details.
           </p>
         </div>
       </section>
 
       <section className="bg-rx-black py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <ProductShowcase products={products} />
+          <ProductGrid products={products} />
         </div>
       </section>
     </>

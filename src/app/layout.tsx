@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${manrope.variable} ${inter.variable} h-full`}>
       <body className="flex min-h-full flex-col bg-rx-black text-rx-white antialiased">
