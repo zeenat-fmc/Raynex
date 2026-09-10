@@ -60,7 +60,7 @@ export const products: Product[] = [
     description:
       "12W recessed LED downlight featuring an upgraded BrightWhite reflector cup for improved brightness and uniform light distribution.",
     // image: "/products/3.png",
-     images: ["/products/3.1.png", "/products/3.2.png", "/products/3.3.png"],
+     images: ["/products/3.png", "/products/3.1.png", "/products/3.3.png"],
     specs: defaultSpecs,
   },
 
@@ -138,7 +138,7 @@ export const products: Product[] = [
     description:
       "Compact 24W recessed LED downlight with a white cup and 4-inch opening, providing strong illumination from a smaller ceiling cutout.",
     // image: "/products/09.png",
-     images: ["/products/09.png", "/products/09.jpg", "/products/1-3.png"],
+     images: ["/products/09.png", "/products/09.jpg", "/products/9.3.png"],
     specs: defaultSpecs,
   },
 ];
