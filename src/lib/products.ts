@@ -34,7 +34,7 @@ export const products: Product[] = [
     description:
       "12W white recessed LED downlight with multi-colour functionality, designed for versatile residential and commercial lighting applications.",
     // image: "/products/1.png",
-    images: ["/products/1.png", "/products/1.1.png", "/products/1-3.png"],
+    images: ["/products/1.png", "/products/1.1.png", "/products/1.3.png"],
     specs: defaultSpecs,
   },
 
@@ -59,8 +59,8 @@ export const products: Product[] = [
     category: "Downlights",
     description:
       "12W recessed LED downlight featuring an upgraded BrightWhite reflector cup for improved brightness and uniform light distribution.",
-    image: "/products/3.png",
-     images: ["/products/1.png", "/products/1-2.png", "/products/1-3.png"],
+    // image: "/products/3.png",
+     images: ["/products/3.1.png", "/products/3.2.png", "/products/3.3.png"],
     specs: defaultSpecs,
   },
 
