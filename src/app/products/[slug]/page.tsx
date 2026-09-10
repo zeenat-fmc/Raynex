@@ -3,10 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/lib/products";
 import { getWhatsAppLink } from "@/lib/whatsapp";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import ProductCardCarousel from "@/components/ProductCardCarousel";
 import ProductCard from "@/components/ProductCard";
 import Reveal from "@/components/Reveal";
 import { RayGlyph } from "@/components/Rays";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
@@ -50,14 +51,13 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           </nav>
 
           <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <Reveal>
-              <ImagePlaceholder
-                src={product.image}
-                alt={product.name}
-                label="Product Image"
-                aspect="square"
-              />
-            </Reveal>
+           <Reveal>
+  <ProductCardCarousel
+    images={product.images}
+    image={product.image}
+    alt={product.name}
+  />
+</Reveal>
 
             <Reveal delay={100} className="flex flex-col gap-6">
               <span className="flex items-center gap-2 text-rx-blue-light">
@@ -99,17 +99,22 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                     Specifications
                   </p>
                   <dl>
-                    {product.specs.map((spec, i) => (
-                      <div
-                        key={spec.label}
-                        className={`flex items-center justify-between px-5 py-3 text-sm ${
-                          i % 2 === 1 ? "bg-rx-charcoal/40" : ""
-                        }`}
-                      >
-                        <dt className="text-rx-muted-2">{spec.label}</dt>
-                        <dd className="font-medium text-rx-white">{spec.value}</dd>
-                      </div>
-                    ))}
+                    {product.specs.map((spec, i) => {
+                      const label = String(spec.label ?? `Spec ${i + 1}`);
+                      const value = String(spec.value ?? "");
+
+                      return (
+                        <div
+                          key={label}
+                          className={`flex items-center justify-between px-5 py-3 text-sm ${
+                            i % 2 === 1 ? "bg-rx-charcoal/40" : ""
+                          }`}
+                        >
+                          <dt className="text-rx-muted-2">{label}</dt>
+                          <dd className="font-medium text-rx-white">{value}</dd>
+                        </div>
+                      );
+                    })}
                   </dl>
                 </div>
               )}

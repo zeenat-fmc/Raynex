@@ -9,7 +9,7 @@ export default function BrandIntro() {
         <Reveal>
           {/* Replace the src with your image path, e.g. "/images/brand.jpg" or an imported asset */}
           <img
-            src="/brand/brand.png"
+            src="/brand/brand.jpg"
             alt="RAYNEX lighting installed inside a modern living space"
             className="w-full h-auto rounded-md object-cover"
           />

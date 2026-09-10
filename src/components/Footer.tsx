@@ -10,14 +10,20 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-3" aria-label="RAYNEX home">
-              <span className="relative h-9 w-9 overflow-hidden rounded-sm">
-                <Image src="/brand/raynex-logo.jpg" alt="" fill className="object-cover" />
-              </span>
-              <span className="font-display text-lg font-extrabold tracking-tight text-rx-white">
-                RAYNEX
-              </span>
-            </Link>
+             <Link
+  href="/"
+  className="flex items-center"
+  aria-label="RAYNEX home"
+>
+  <Image
+    src="/brand/raynex-logo.png"
+    alt="RAYNEX"
+    width={180}
+    height={55}
+    priority
+    className="h-auto w-[150px] object-contain sm:w-[190px]"
+  />
+</Link>
             <p className="max-w-xs text-sm leading-relaxed text-rx-muted">
               Illuminate Your World. Premium lighting and electrical
               products for everyday spaces.

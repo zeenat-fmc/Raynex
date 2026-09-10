@@ -2,97 +2,74 @@
 
 import { useState, type FormEvent, type ReactNode } from "react";
 
-const WHATSAPP_NUMBER = "+923427043613"; 
+type Status = "idle" | "submitting" | "success" | "error";
 
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setStatus("submitting");
+    setErrorMessage(null);
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const payload = {
+      name: String(data.get("name") || ""),
+      email: String(data.get("email") || ""),
+      phone: String(data.get("phone") || ""),
+      message: String(data.get("message") || ""),
+      website: String(data.get("website") || ""), // honeypot
+    };
 
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const phone = String(formData.get("phone") || "").trim();
-    const message = String(formData.get("message") || "").trim();
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    const whatsappMessage = `Hello RAYNEX,
+      const result = await res.json().catch(() => ({}));
 
-I would like to get in touch regarding your lighting products.
+      if (!res.ok) {
+        setErrorMessage(result.error || "Something went wrong. Please try again.");
+        setStatus("error");
+        return;
+      }
 
-Name: ${name}
-Email: ${email}
-Phone: ${phone || "Not provided"}
-
-Message:
-${message}
-
-Thank you.`;
-
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
-
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-
-    setSubmitted(true);
+      setStatus("success");
+      form.reset();
+    } catch {
+      setErrorMessage("Couldn't reach the server. Please check your connection and try again.");
+      setStatus("error");
+    }
   };
 
-  if (submitted) {
+  if (status === "success") {
     return (
       <div className="border border-rx-border bg-rx-charcoal p-8">
-        <h3 className="font-display text-xl font-bold text-rx-white">
-          WhatsApp opened.
-        </h3>
-
+        <h3 className="font-display text-xl font-bold text-rx-white">Message sent.</h3>
         <p className="mt-2 text-sm leading-relaxed text-rx-muted">
-          Your message has been prepared in WhatsApp. Please review it and
-          press send to contact the RAYNEX team.
+          Thanks for reaching out = the RAYNEX team will get back to you shortly.
         </p>
       </div>
     );
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-col gap-5 border border-rx-border bg-rx-charcoal p-8"
-    >
+    <form onSubmit={handleSubmit} className="flex flex-col gap-5 border border-rx-border bg-rx-charcoal p-8">
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Full Name" htmlFor="name">
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            className={inputClass}
-            placeholder="Your name"
-          />
+          <input id="name" name="name" type="text" required className={inputClass} placeholder="Your name" />
         </Field>
-
         <Field label="Email Address" htmlFor="email">
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            className={inputClass}
-            placeholder="you@email.com"
-          />
+          <input id="email" name="email" type="email" required className={inputClass} placeholder="you@email.com" />
         </Field>
       </div>
-
       <Field label="Phone Number" htmlFor="phone">
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          className={inputClass}
-          placeholder="Optional"
-        />
+        <input id="phone" name="phone" type="tel" className={inputClass} placeholder="Optional" />
       </Field>
-
       <Field label="Message" htmlFor="message">
         <textarea
           id="message"
@@ -104,11 +81,24 @@ Thank you.`;
         />
       </Field>
 
+      {/* Honeypot — hidden from real visitors, bots tend to fill every field */}
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
+
+      {status === "error" && errorMessage && (
+        <p role="alert" className="text-sm text-red-400">
+          {errorMessage}
+        </p>
+      )}
+
       <button
         type="submit"
-        className="rx-beam-hover mt-2 inline-flex w-fit items-center gap-2 border border-rx-blue bg-rx-blue px-7 py-3.5 text-sm font-semibold uppercase rx-tracking-wide text-rx-white transition-colors hover:bg-rx-blue-dark"
+        disabled={status === "submitting"}
+        className="rx-beam-hover mt-2 inline-flex w-fit items-center gap-2 border border-rx-blue bg-rx-blue px-7 py-3.5 text-sm font-semibold uppercase rx-tracking-wide text-rx-white transition-colors hover:bg-rx-blue-dark disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Send Message
+        {status === "submitting" ? "Sending…" : "Send Message"}
       </button>
     </form>
   );
@@ -128,13 +118,9 @@ function Field({
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <label
-        htmlFor={htmlFor}
-        className="rx-tracking-wide text-[11px] font-semibold uppercase text-rx-muted"
-      >
+      <label htmlFor={htmlFor} className="rx-tracking-wide text-[11px] font-semibold uppercase text-rx-muted">
         {label}
       </label>
-
       {children}
     </div>
   );

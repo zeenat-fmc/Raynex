@@ -4,7 +4,7 @@ import ProductGrid from "@/components/ProductGrid";
 import { RayField } from "@/components/Rays";
 
 export const metadata: Metadata = {
-  title: "Products — RAYNEX",
+  title: "Products - RAYNEX",
   description: "Explore the full RAYNEX lighting and electrical product catalogue.",
 };
 

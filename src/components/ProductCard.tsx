@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Product } from "@/lib/products";
-import ImagePlaceholder from "./ImagePlaceholder";
+import ProductCardCarousel from "./ProductCardCarousel";
 
 type ProductCardProps = {
   product: Product;
@@ -12,13 +12,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       href={`/products/${product.id}`}
       className="group rx-beam-hover flex flex-col border border-rx-border bg-rx-charcoal transition-colors duration-300 hover:border-rx-blue/60"
     >
-      <ImagePlaceholder
-        src={product.image}
-        alt={product.name}
-        label="Product Image"
-        aspect="square"
-        className="border-0 border-b border-rx-border transition-transform duration-500 group-hover:scale-[1.02]"
-      />
+      <ProductCardCarousel images={product.images} image={product.image} alt={product.name} />
       <div className="flex flex-1 flex-col gap-3 p-6">
         <span className="rx-tracking-wide text-[11px] font-semibold uppercase text-rx-blue-light">
           {product.category}
