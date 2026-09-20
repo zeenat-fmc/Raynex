@@ -34,7 +34,7 @@ export const products: Product[] = [
     description:
       "12W white recessed LED downlight with multi-colour functionality, designed for versatile residential and commercial lighting applications.",
     // image: "/products/1.png",
-    images: ["/products/1.png", "/products/1.1.png", "/products/1.3.png"],
+    images: ["/products/HMR/front.png", "/products/HMR/2.png", "/products/HMR/3.png","/products/HMR/4.png" ,"/products/HMR/5.png", "/products/HMR/6.png"],
     specs: defaultSpecs,
   },
 
@@ -47,7 +47,7 @@ export const products: Product[] = [
     description:
       "Compact 12W recessed LED downlight with a clean white cup design, suitable for homes, offices and retail spaces.",
     // image: "/products/2.png",
-     images: ["/products/2.png","/products/2.1.png", "/products/2.2.png",],
+     images: ["/products/NS/front.png","/products/NS/2.png", "/products/NS/3.png", "/products/NS/4.png","/products/NS/5.png","/prodcuts/NS/2.png"],
     specs: defaultSpecs,
   },
 
@@ -60,7 +60,7 @@ export const products: Product[] = [
     description:
       "12W recessed LED downlight featuring an upgraded BrightWhite reflector cup for improved brightness and uniform light distribution.",
     // image: "/products/3.png",
-     images: ["/products/3.png", "/products/3.1.png", "/products/3.3.png"],
+     images: ["/products/HM/front.png", "/products/HM/2.png", "/products/HM/3.png","/products/HM/4.png", "/products/HM/5.png","/products/HM/6.png" ],
     specs: defaultSpecs,
   },
 
@@ -73,7 +73,7 @@ export const products: Product[] = [
     description:
       "12W recessed LED downlight with a distinctive matte black cup, designed for modern interiors requiring focused illumination and reduced glare.",
     // image: "/products/4.png",
-    images: ["/products/4.png", "/products/4.1.jpg", "/products/4.2.png"],
+     images: ["/products/Maserati/front.png", "/products/Maserati/2.png", "/products/Maserati/3.png" , "/products/Maserati/4.png", "/products/Maserati/5.png", "/products/Maserati/6.png"],
     specs: defaultSpecs,
   },
 
@@ -81,12 +81,12 @@ export const products: Product[] = [
     id: "product-05",
     srNo: 37,
     name: "Igor 12W White Cup",
-    articleNo: "BSGY",
+    articleNo: "RSGY",
     category: "Downlights",
     description:
       "12W white recessed downlight with a precision-designed cup for controlled illumination, suitable for residential, retail and architectural applications.",
     // image: "/products/05.png",
-     images: ["/products/05.png", "/products/5.1.png", "/products/5.2.jpg"],
+     images: ["/products/RS/front.png", "/products/RS/2.png", "/products/RS/3.png" ,"/products/RS/4.png", "/products/RS/5.png", "/products/RS/6.png"],
     specs: defaultSpecs,
   },
 
@@ -99,7 +99,7 @@ export const products: Product[] = [
     description:
       "10W recessed LED downlight with a white housing, transparent cup and signature orange spring mechanism for secure installation.",
     // image: "/products/06.png",
-     images: ["/products/06.png", "/products/6.1.png", "/products/6.2.png"],
+     images: ["/products/PG/front.png", "/products/PG/2.png", "/products/PG/3.png", "/products/PG/4.png", "/products/PG/5.png", "/products/PG/6.png"],
     specs: defaultSpecs,
   },
 
@@ -112,7 +112,7 @@ export const products: Product[] = [
     description:
       "Compact 7W white recessed LED downlight designed for smaller spaces, corridors, closets and low-ceiling applications.",
     // image: "/products/07.png",
-     images: ["/products/07.png", "/products/7.1.png", "/products/7.2.png"],
+     images: ["/products/AY/front.png", "/products/AY/2.png", "/products/AY/3.png", "/products/AY/4.png", "/products/AY/5.png", "/products/AY/6.png"],
     specs: defaultSpecs,
   },
 
@@ -125,7 +125,7 @@ export const products: Product[] = [
     description:
       "High-output 24W recessed LED downlight with a white cup and 5-inch opening, designed for larger residential and commercial spaces.",
     // image: "/products/08.png",
-     images: ["/products/08.png", "/products/8.1.jpg", "/products/8.2.png"],
+     images: ["/products/MY/front.png", "/products/MY/2.png", "/products/MY/3.png", "/products/MY/4.png", "/products/MY/5.png","/products/MY/6.png"],
     specs: defaultSpecs,
   },
 
@@ -138,7 +138,7 @@ export const products: Product[] = [
     description:
       "Compact 24W recessed LED downlight with a white cup and 4-inch opening, providing strong illumination from a smaller ceiling cutout.",
     // image: "/products/09.png",
-     images: ["/products/09.png", "/products/09.jpg", "/products/9.3.png"],
+     images: ["/products/RF/front.png", "/products/RF/2.png", "/products/RF/3.png","/products/RF/4.png", "/products/RF/5.png", "/products/RF/6.png"],
     specs: defaultSpecs,
   },
 ];
