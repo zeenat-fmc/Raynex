@@ -47,7 +47,7 @@ export const products: Product[] = [
     description:
       "Compact 12W recessed LED downlight with a clean white cup design, suitable for homes, offices and retail spaces.",
     // image: "/products/2.png",
-     images: ["/products/NS/front.png","/products/NS/2.png", "/products/NS/3.png", "/products/NS/4.png","/products/NS/5.png","/prodcuts/NS/2.png"],
+     images: ["/products/NS/front.png","/products/NS/2.png", "/products/NS/3.png", "/products/NS/4.png","/products/NS/5.png","/products/NS/2.png"],
     specs: defaultSpecs,
   },
 
