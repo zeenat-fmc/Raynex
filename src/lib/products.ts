@@ -125,7 +125,7 @@ export const products: Product[] = [
     description:
       "High-output 24W recessed LED downlight with a white cup and 5-inch opening, designed for larger residential and commercial spaces.",
     // image: "/products/08.png",
-     images: ["/products/MY/front.png", "/products/MY/2.png", "/products/MY/3.png", "/products/MY/4.png", "/products/MY/5.png","/products/MY/6.png"],
+     images: ["/products/MY/front.png", "/products/MY/2.png", "/products/MY/3.png", "/products/MY/4.png", "/products/MY/5.png","/products/MY/6.6.png"],
     specs: defaultSpecs,
   },
 
