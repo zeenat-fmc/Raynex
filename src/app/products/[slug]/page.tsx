@@ -53,10 +53,9 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
            <Reveal>
   <ProductCardCarousel
-    images={product.images}
-    image={product.image}
-    alt={product.name}
-  />
+                images={product.images}
+                image={product.image}
+                alt={product.name} productId={""}  />
 </Reveal>
 
             <Reveal delay={100} className="flex flex-col gap-6">
